@@ -8,6 +8,7 @@ services:
     volumes:
       - ./backend:/var/www/html
       - ./docker/php/local.ini:/usr/local/etc/php/conf.d/local.ini
+      - ./docker/php/xdebug.ini:/usr/local/etc/php/conf.d/xdebug.ini
     networks:
       - finance_network
     depends_on:
