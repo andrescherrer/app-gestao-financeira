@@ -23,6 +23,12 @@ e este projeto adere ao [Semantic Versioning](https://semver.org/lang/pt-BR/).
   - `App\Infrastructure\` para camada de infraestrutura
   - `App\Interfaces\` para camada de interface
   - Estrutura de diretórios criada conforme planejamento
+- Arquivo `docker-compose.yml` criado com configuração completa
+  - Serviços: app (PHP-FPM), nginx, PostgreSQL, Redis
+  - Queue worker e scheduler para processamento assíncrono
+  - Health checks para PostgreSQL e Redis
+  - Volumes persistentes para dados do banco e Redis
+  - Network isolada para comunicação entre serviços
 
 <!-- 
 ## [0.1.0] - YYYY-MM-DD

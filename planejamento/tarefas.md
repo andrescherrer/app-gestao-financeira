@@ -34,7 +34,7 @@ Este documento detalha todas as tarefas necessárias para implementar o sistema 
 | 1.1 | Instalar Laravel via Composer | 30 min | 🔴 Alta | Nenhuma | Projeto Laravel criado | ✅ |
 | 1.2 | Configurar `.env` e variáveis de ambiente | 1h | 🔴 Alta | Projeto Laravel criado | Arquivo `.env` configurado | ✅ |
 | 1.3 | Configurar namespace e autoload | 30 min | 🟡 Média | Projeto Laravel criado | `composer.json` atualizado | ✅ |
-| 1.4 | Criar `docker-compose.yml` | 2h | 🔴 Alta | Nenhuma | Arquivo `docker-compose.yml` criado | ⬜ |
+| 1.4 | Criar `docker-compose.yml` | 2h | 🔴 Alta | Nenhuma | Arquivo `docker-compose.yml` criado | ✅ |
 | 1.5 | Criar Dockerfile para PHP-FPM | 1h | 🔴 Alta | Nenhuma | `docker/Dockerfile` criado | ⬜ |
 | 1.6 | Configurar Nginx | 1h | 🔴 Alta | Dockerfile criado | `docker/nginx/default.conf` configurado | ⬜ |
 | 1.7 | Configurar PostgreSQL no Docker | 30 min | 🔴 Alta | docker-compose.yml | Container PostgreSQL funcionando | ⬜ |
