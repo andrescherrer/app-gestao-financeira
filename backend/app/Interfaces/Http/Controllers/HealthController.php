@@ -3,10 +3,8 @@
 namespace App\Interfaces\Http\Controllers;
 
 use Illuminate\Http\JsonResponse;
-use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Redis;
-use Illuminate\Support\Facades\Queue;
 
 final class HealthController
 {
@@ -18,7 +16,7 @@ final class HealthController
             'queue' => $this->checkQueue(),
         ];
 
-        $healthy = !in_array(false, $checks, true);
+        $healthy = ! in_array(false, $checks, true);
 
         return response()->json([
             'status' => $healthy ? 'healthy' : 'unhealthy',
@@ -31,6 +29,7 @@ final class HealthController
     {
         try {
             DB::connection()->getPdo();
+
             return true;
         } catch (\Exception $e) {
             return false;
@@ -41,6 +40,7 @@ final class HealthController
     {
         try {
             Redis::ping();
+
             return true;
         } catch (\Exception $e) {
             return false;
@@ -52,10 +52,10 @@ final class HealthController
         try {
             // Verificar se o driver de fila está configurado
             $connection = config('queue.default');
+
             return $connection !== null;
         } catch (\Exception $e) {
             return false;
         }
     }
 }
-

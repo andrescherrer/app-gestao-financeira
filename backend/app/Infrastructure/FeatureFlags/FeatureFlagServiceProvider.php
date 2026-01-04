@@ -42,4 +42,3 @@ class FeatureFlagServiceProvider extends ServiceProvider
         });
     }
 }
-
