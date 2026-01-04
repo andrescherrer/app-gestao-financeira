@@ -1,0 +1,113 @@
+---
+description: Padrão para manutenção do CHANGELOG
+globs: ["CHANGELOG.md"]
+alwaysApply: false
+---
+
+# Padrão de CHANGELOG
+
+Seguimos o formato [Keep a Changelog](https://keepachangelog.com/pt-BR/1.1.0/) combinado com [Semantic Versioning](https://semver.org/lang/pt-BR/).
+
+## Estrutura do Arquivo
+
+O `CHANGELOG.md` fica na raiz do projeto com esta estrutura:
+
+```markdown
+# Changelog
+
+Todas as mudanças notáveis deste projeto serão documentadas neste arquivo.
+
+O formato é baseado em [Keep a Changelog](https://keepachangelog.com/pt-BR/1.1.0/),
+e este projeto adere ao [Semantic Versioning](https://semver.org/lang/pt-BR/).
+
+## [Unreleased]
+
+### Added
+- Novas funcionalidades
+
+### Changed
+- Mudanças em funcionalidades existentes
+
+### Deprecated
+- Funcionalidades que serão removidas em breve
+
+### Removed
+- Funcionalidades removidas
+
+### Fixed
+- Correções de bugs
+
+### Security
+- Correções de vulnerabilidades
+
+## [1.0.0] - 2024-01-15
+
+### Added
+- Feature X implementada
+- Feature Y implementada
+
+### Fixed
+- Bug Z corrigido
+
+[Unreleased]: https://github.com/user/repo/compare/v1.0.0...HEAD
+[1.0.0]: https://github.com/user/repo/releases/tag/v1.0.0
+```
+
+## Categorias
+
+Use apenas estas categorias, na ordem apresentada:
+
+| Categoria | Quando usar |
+|-----------|-------------|
+| **Added** | Novas funcionalidades |
+| **Changed** | Alterações em funcionalidades existentes |
+| **Deprecated** | Funcionalidades marcadas para remoção futura |
+| **Removed** | Funcionalidades removidas |
+| **Fixed** | Correções de bugs |
+| **Security** | Correções de vulnerabilidades |
+
+**Omita categorias vazias** — só inclua as que têm conteúdo.
+
+## Regras de Escrita
+
+1. **Escreva para humanos**, não para máquinas
+2. **Uma entrada por mudança significativa** — agrupe mudanças relacionadas
+3. **Use verbos no passado**: "Adicionado", "Corrigido", "Removido"
+4. **Seja específico**: "Corrigido erro de cálculo no carrinho" > "Correção de bug"
+5. **Referencie issues/PRs** quando relevante: `(#123)`
+
+## Seção Unreleased
+
+- **Sempre mantenha** a seção `[Unreleased]` no topo
+- Adicione mudanças aqui durante o desenvolvimento
+- No release, renomeie para a versão e crie novo `[Unreleased]`
+
+## Versionamento Semântico
+
+Ao criar uma release:
+
+- **MAJOR (X.0.0)**: mudanças incompatíveis na API
+- **MINOR (0.X.0)**: novas funcionalidades compatíveis
+- **PATCH (0.0.X)**: correções compatíveis
+
+## Exemplo de Entrada Bem Escrita
+
+```markdown
+### Added
+- Autenticação via Google OAuth para login de usuários (#45)
+- Endpoint `GET /api/products/featured` para produtos em destaque
+
+### Fixed
+- Corrigido cálculo de frete que não considerava CEPs da região Norte (#78)
+- Resolvido vazamento de memória no componente de chat em tempo real
+
+### Security
+- Atualizado `lodash` para 4.17.21 corrigindo CVE-2021-23337
+```
+
+## Quando NÃO Adicionar ao CHANGELOG
+
+- Mudanças internas sem impacto para usuários
+- Refatorações que não alteram comportamento
+- Atualizações de dependências de desenvolvimento
+- Correções de typos na documentação

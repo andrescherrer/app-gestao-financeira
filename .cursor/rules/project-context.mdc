@@ -1,0 +1,230 @@
+---
+description: Contexto e configurações específicas do projeto
+globs: ["**/*"]
+alwaysApply: true
+---
+
+# Contexto do Projeto
+
+> ⚠️ **CONFIGURE ESTE ARQUIVO** para seu projeto específico
+
+## Stack
+
+### Backend
+- **Framework**: Laravel (versão mais recente)
+- **Linguagem**: PHP 8.2+
+- **Banco de Dados**: PostgreSQL
+- **Cache**: Redis
+- **Queue**: Processamento assíncrono
+- **Testes**: Pest (PHP)
+
+### Frontend
+- **Framework**: Nuxt 3
+- **UI**: Vue 3 + shadcn-vue + Tailwind CSS
+- **Linguagem**: TypeScript (strict mode)
+- **Estado**: Pinia
+- **Testes**: Vitest + Vue Test Utils + Playwright (E2E)
+- **Package Manager**: pnpm
+- **Node**: >= 20.x
+
+## Estrutura do Projeto
+
+### Backend (Laravel)
+```
+app/
+├── Domain/                 # Camada de Domínio (DDD)
+│   ├── Identity/          # Usuários e Organizações
+│   ├── Account/           # Contas Financeiras
+│   ├── Transaction/       # Transações
+│   ├── Planning/          # Metas e Objetivos
+│   └── Shared/            # Value Objects compartilhados
+├── Application/            # Camada de Aplicação
+│   └── [Domain]/          # Commands e Handlers
+├── Infrastructure/         # Camada de Infraestrutura
+│   ├── Persistence/       # Repositories Eloquent
+│   ├── Jobs/              # Background Jobs
+│   └── Services/          # Serviços externos
+└── Interfaces/            # Camada de Interface
+    └── Http/
+        └── Controllers/   # API Controllers
+```
+
+### Frontend (Nuxt 3)
+```
+src/
+├── components/             # Componentes Vue
+│   ├── ui/                # Componentes shadcn-vue
+│   └── [domain]/          # Componentes do domínio
+├── composables/           # Composables Vue
+├── layouts/               # Layouts Nuxt
+├── pages/                # Páginas (file-based routing)
+├── stores/               # Pinia stores
+├── types/                # TypeScript types
+└── utils/                # Utilitários
+```
+
+### Documentação
+```
+docs/
+├── adr/                   # Architecture Decision Records
+├── api/                   # Documentação de API
+└── [outros documentos]    # Planejamento, etc.
+```
+
+## Scopes para Commits
+
+Use estes scopes nas mensagens de commit:
+
+| Scope | Descrição |
+|-------|-----------|
+| `auth` | Autenticação e autorização |
+| `ui` | Componentes de interface (shadcn-vue) |
+| `api` | Endpoints e integrações |
+| `transaction` | Transações financeiras |
+| `account` | Contas (corrente, crédito, investimento, empréstimo) |
+| `goal` | Metas e objetivos |
+| `category` | Categorias de transações |
+| `balance` | Cálculo de saldos |
+| `import` | Importação OFX |
+| `user` | Perfil e conta do usuário |
+| `organization` | Organizações (PF/PJ) |
+| `config` | Configurações do projeto |
+| `deps` | Dependências |
+| `docs` | Documentação |
+| `test` | Testes |
+
+## Comandos Disponíveis
+
+### Backend (Laravel)
+```bash
+# Desenvolvimento
+php artisan serve     # Inicia servidor de desenvolvimento
+php artisan migrate   # Executa migrations
+php artisan db:seed   # Popular banco de dados
+
+# Qualidade
+./vendor/bin/pint     # Formatação de código (Laravel Pint)
+./vendor/bin/phpstan  # Análise estática (PHPStan)
+
+# Testes
+php artisan test      # Executa testes (Pest)
+php artisan test --coverage  # Com cobertura
+```
+
+### Frontend (Nuxt 3)
+```bash
+# Desenvolvimento
+pnpm dev              # Inicia servidor de desenvolvimento
+pnpm build            # Build de produção
+pnpm preview          # Preview do build
+
+# Qualidade
+pnpm lint             # ESLint
+pnpm lint:fix         # ESLint com auto-fix
+pnpm typecheck        # Verificação de tipos
+
+# Testes
+pnpm test             # Todos os testes (Vitest)
+pnpm test:watch       # Watch mode
+pnpm test:coverage    # Com relatório de cobertura
+pnpm test:e2e         # Testes E2E (Playwright)
+```
+
+### Docker
+```bash
+docker-compose up -d  # Inicia containers
+docker-compose down   # Para containers
+docker-compose logs   # Ver logs
+```
+
+## Convenções de Código
+
+### Nomenclatura
+
+| Tipo | Convenção | Exemplo |
+|------|-----------|---------|
+| Componentes | PascalCase | `UserProfile.vue` |
+| Composables | camelCase com `use` | `useAuth.ts` |
+| Utilitários | camelCase | `formatCurrency.ts` |
+| Types/Interfaces | PascalCase | `User`, `ProductResponse` |
+| Constantes | SCREAMING_SNAKE | `MAX_RETRY_COUNT` |
+
+### Componentes Vue
+
+```vue
+<script setup lang="ts">
+// 1. Imports
+// 2. Props e Emits
+// 3. Composables
+// 4. Estado reativo
+// 5. Computed
+// 6. Watchers
+// 7. Métodos
+// 8. Lifecycle hooks
+</script>
+
+<template>
+  <!-- Template -->
+</template>
+
+<style scoped>
+/* Estilos */
+</style>
+```
+
+## Integrações Externas
+
+| Serviço | Propósito | Status |
+|---------|-----------|--------|
+| Laravel Sanctum | Autenticação API | ✅ Planejado |
+| Laravel Passport | OAuth2 para integrações | ✅ Planejado |
+| Sentry | Error tracking e monitoramento | ✅ Planejado |
+| OpenTelemetry | Distributed tracing | ✅ Planejado |
+
+## Variáveis de Ambiente
+
+### Backend (.env)
+```bash
+APP_NAME="Sistema de Gestão Financeira"
+APP_ENV=local
+APP_KEY=
+APP_DEBUG=true
+
+DB_CONNECTION=pgsql
+DB_HOST=127.0.0.1
+DB_PORT=5432
+DB_DATABASE=finance_db
+DB_USERNAME=
+DB_PASSWORD=
+
+REDIS_HOST=127.0.0.1
+REDIS_PASSWORD=null
+REDIS_PORT=6379
+
+SENTRY_LARAVEL_DSN=
+```
+
+### Frontend (.env)
+```bash
+NUXT_PUBLIC_API_URL=http://localhost:8000/api/v1
+NUXT_PUBLIC_APP_NAME="Sistema de Gestão Financeira"
+```
+
+## Links Úteis
+
+### Frontend
+- [Documentação Nuxt 3](https://nuxt.com/docs)
+- [Vue 3](https://vuejs.org/)
+- [shadcn-vue](https://www.shadcn-vue.com/)
+- [Tailwind CSS](https://tailwindcss.com/)
+- [Pinia](https://pinia.vuejs.org/)
+- [Vitest](https://vitest.dev/)
+- [Playwright](https://playwright.dev/)
+
+### Backend
+- [Laravel](https://laravel.com/docs)
+- [Pest](https://pestphp.com/)
+- [PHPStan](https://phpstan.org/)
+- [Laravel Pint](https://laravel.com/docs/pint)
+- [Laravel Sanctum](https://laravel.com/docs/sanctum)
+- [Laravel Passport](https://laravel.com/docs/passport)

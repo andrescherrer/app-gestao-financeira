@@ -1,0 +1,196 @@
+---
+description: Padrões de teste do projeto
+globs: ["**/*.test.ts", "**/*.spec.ts", "**/*.test.js", "**/*.spec.js", "**/tests/**/*", "**/__tests__/**/*"]
+alwaysApply: false
+---
+
+# Padrões de Teste
+
+## Pirâmide de Testes
+
+```
+        /\
+       /  \        E2E (poucos)
+      /----\       Fluxos críticos do usuário
+     /      \
+    /--------\     Integração (moderado)
+   /          \    Comunicação entre módulos
+  /------------\
+ /              \  Unitários (muitos)
+/________________\ Funções e métodos isolados
+```
+
+## Cobertura Esperada
+
+| Tipo de código | Cobertura mínima |
+|----------------|------------------|
+| Lógica de negócio | 80% |
+| Utilitários | 90% |
+| Componentes UI | 70% (comportamento, não snapshot) |
+| Integrações externas | Mocks + testes de contrato |
+
+## Nomenclatura
+
+### Arquivos de Teste
+
+```
+# Junto ao arquivo testado
+src/
+├── utils/
+│   ├── formatCurrency.ts
+│   └── formatCurrency.test.ts
+├── components/
+│   ├── Button.vue
+│   └── Button.test.ts
+
+# Ou em pasta dedicada (espelha estrutura)
+tests/
+├── unit/
+│   └── utils/
+│       └── formatCurrency.test.ts
+├── integration/
+│   └── checkout/
+│       └── payment-flow.test.ts
+└── e2e/
+    └── user-journey.test.ts
+```
+
+### Estrutura dos Testes
+
+```typescript
+describe('[NomeDaUnidade]', () => {
+  describe('[método ou cenário]', () => {
+    it('should [resultado esperado] when [condição]', () => {
+      // Arrange
+      // Act
+      // Assert
+    });
+  });
+});
+```
+
+**Exemplos de nomes:**
+
+```typescript
+// ✅ Bom
+it('should return formatted price with currency symbol when value is positive', () => {})
+it('should throw ValidationError when email format is invalid', () => {})
+it('should emit "submit" event when form is valid and button is clicked', () => {})
+
+// ❌ Ruim
+it('works', () => {})
+it('test formatCurrency', () => {})
+it('should work correctly', () => {})
+```
+
+## Padrão AAA (Arrange-Act-Assert)
+
+```typescript
+it('should calculate total with discount when coupon is valid', () => {
+  // Arrange - preparação
+  const cart = createCart([
+    { id: 1, price: 100, quantity: 2 },
+    { id: 2, price: 50, quantity: 1 }
+  ]);
+  const coupon = { code: 'SAVE10', discount: 0.1 };
+
+  // Act - execução
+  const total = calculateTotal(cart, coupon);
+
+  // Assert - verificação
+  expect(total).toBe(225); // (200 + 50) * 0.9
+});
+```
+
+## O Que Testar
+
+### Unitários
+
+- Funções puras e utilitários
+- Validações e transformações de dados
+- Lógica de negócio isolada
+- Edge cases (null, undefined, arrays vazios, limites)
+
+### Integração
+
+- Fluxos entre múltiplos módulos
+- Chamadas a APIs (com mocks de rede)
+- Interação com stores/estado global
+- Composables que dependem de contexto Vue
+
+### E2E
+
+- Jornadas críticas do usuário
+- Fluxo de checkout/pagamento
+- Autenticação completa
+- Funcionalidades que geram receita
+
+## O Que NÃO Testar
+
+- Código de terceiros (bibliotecas)
+- Getters/setters triviais
+- Constantes e configurações
+- Implementação interna (teste comportamento, não implementação)
+
+## Mocks e Stubs
+
+```typescript
+// ✅ Mock apenas o necessário
+vi.mock('@/services/api', () => ({
+  fetchUser: vi.fn().mockResolvedValue({ id: 1, name: 'Test' })
+}));
+
+// ✅ Use factories para dados de teste
+const createUser = (overrides = {}) => ({
+  id: 1,
+  name: 'Default User',
+  email: 'test@example.com',
+  ...overrides
+});
+
+// ❌ Evite mocks profundos que escondem problemas
+vi.mock('@/services/api'); // mock completo sem definição
+```
+
+## Testes de Componentes Vue
+
+```typescript
+import { mount } from '@vue/test-utils';
+import Button from './Button.vue';
+
+describe('Button', () => {
+  it('should emit click event when clicked', async () => {
+    const wrapper = mount(Button, {
+      props: { label: 'Submit' }
+    });
+
+    await wrapper.trigger('click');
+
+    expect(wrapper.emitted('click')).toHaveLength(1);
+  });
+
+  it('should be disabled when loading prop is true', () => {
+    const wrapper = mount(Button, {
+      props: { label: 'Submit', loading: true }
+    });
+
+    expect(wrapper.attributes('disabled')).toBeDefined();
+  });
+});
+```
+
+## Comandos
+
+```bash
+# Rodar todos os testes
+pnpm test
+
+# Watch mode durante desenvolvimento
+pnpm test:watch
+
+# Com cobertura
+pnpm test:coverage
+
+# Apenas E2E
+pnpm test:e2e
+```

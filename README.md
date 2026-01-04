@@ -30,7 +30,10 @@ Sistema de gestão financeira que permite aos usuários controlar suas finanças
   Comparação entre os requisitos esperados e o que foi planejado, identificando correspondências e lacunas.
 
 - **[Planejamento de Tarefas](planejamento/tarefas.md)**  
-  Planejamento detalhado em formato tabular com 251 tarefas organizadas por 16 semanas (~1.280 horas).
+  Planejamento detalhado em formato tabular com 254 tarefas organizadas por 16 semanas (~1.288 horas).
+
+- **[Fluxo de Desenvolvimento](docs/fluxo-desenvolvimento.md)**  
+  Explicação completa sobre os arquivos de configuração do Cursor, padrões de desenvolvimento, ADRs, CHANGELOG e como o fluxo funciona na prática.
 
 ## 🏗️ Arquitetura
 

@@ -1,0 +1,111 @@
+---
+description: Padrão para Architecture Decision Records (ADRs)
+globs: ["docs/adr/**/*.md"]
+alwaysApply: false
+---
+
+# Architecture Decision Records (ADRs)
+
+ADRs documentam decisões arquiteturais significativas do projeto.
+
+## Quando Criar um ADR
+
+Crie um ADR quando houver decisão sobre:
+
+- Escolha de framework, biblioteca ou ferramenta
+- Padrões arquiteturais (estrutura de pastas, camadas, etc.)
+- Estratégias de integração com serviços externos
+- Mudanças significativas em decisões anteriores
+- Trade-offs técnicos relevantes
+
+**Não crie ADR para:**
+- Escolhas triviais ou temporárias
+- Bugs ou correções
+- Refatorações que não mudam arquitetura
+
+## Estrutura de Arquivos
+
+```
+docs/adr/
+├── 0000-template.md
+├── 0001-usar-nuxt3-como-framework.md
+├── 0002-shadcn-vue-para-componentes-ui.md
+└── ...
+```
+
+## Numeração
+
+- Use numeração sequencial com 4 dígitos: `0001`, `0002`, etc.
+- Nunca reutilize números, mesmo para ADRs deprecados
+- Para encontrar o próximo número, verifique o último ADR existente
+
+## Status Permitidos
+
+- **Proposed**: em discussão, aguardando aprovação
+- **Accepted**: aprovado e em vigor
+- **Deprecated**: não mais recomendado, mas ainda presente no código
+- **Superseded**: substituído por outro ADR (referencie qual)
+
+## Template MADR
+
+Ao criar um ADR, use exatamente este formato:
+
+```markdown
+# ADR-[NNNN]: [Título Descritivo]
+
+## Status
+
+[Proposed | Accepted | Deprecated | Superseded by ADR-XXXX]
+
+## Contexto
+
+Descreva o contexto e o problema que motivou essa decisão.
+- Qual problema estamos resolvendo?
+- Quais restrições existem?
+- Quais requisitos devem ser atendidos?
+
+## Opções Consideradas
+
+### Opção 1: [Nome]
+- ✅ Vantagem
+- ✅ Vantagem
+- ❌ Desvantagem
+
+### Opção 2: [Nome]
+- ✅ Vantagem
+- ❌ Desvantagem
+- ❌ Desvantagem
+
+## Decisão
+
+Afirmação clara do que foi decidido:
+
+> Usaremos [opção escolhida] porque [razão principal].
+
+## Consequências
+
+### Positivas
+- Benefício 1
+- Benefício 2
+
+### Negativas
+- Trade-off 1
+- Trade-off 2
+
+### Riscos
+- Risco identificado e como mitigar
+
+## Links
+
+- [Documentação relevante](url)
+- [Issue relacionada](url)
+- [ADR relacionado](./0000-adr-relacionado.md)
+```
+
+## Boas Práticas
+
+1. **Seja conciso**: ADRs devem ser lidos rapidamente
+2. **Foque no "porquê"**: a decisão em si é menos importante que a razão
+3. **Documente alternativas**: mostra que houve análise
+4. **Atualize o status**: não delete ADRs, marque como deprecated/superseded
+5. **Vincule contexto**: referencie issues, PRs ou outros ADRs relacionados

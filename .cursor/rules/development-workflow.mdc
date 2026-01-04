@@ -1,0 +1,83 @@
+---
+description: Fluxo padrão de desenvolvimento
+globs: ["**/*"]
+alwaysApply: true
+---
+
+# Fluxo de Desenvolvimento
+
+Para toda tarefa de implementação, siga este fluxo:
+
+## 1. Implementação
+
+- Implemente a funcionalidade seguindo os padrões do projeto
+- Mantenha funções/métodos pequenos e com responsabilidade única
+- Nomeie variáveis e funções de forma descritiva
+
+## 2. Testes
+
+Siga a pirâmide de testes:
+
+- **Unitários (obrigatório):** toda função/método com lógica de negócio
+- **Integração (quando aplicável):** fluxos que envolvem múltiplos módulos
+- **E2E (para features críticas):** happy path de funcionalidades core
+
+Cobertura mínima esperada: 80% para código de negócio.
+
+Nomenclatura de testes:
+```
+describe('[Unidade]', () => {
+  it('should [comportamento esperado] when [condição]', () => {})
+})
+```
+
+## 3. Documentação
+
+Atualize conforme o tipo de mudança:
+
+| Tipo | Ação |
+|------|------|
+| Decisão arquitetural | Criar ADR em `docs/adr/` |
+| Nova feature/fix | Adicionar entrada no `CHANGELOG.md` |
+| API pública | Atualizar documentação da API |
+| Configuração | Atualizar README se necessário |
+
+## 4. Preparação do Commit
+
+Prepare o commit seguindo Conventional Commits, mas **não execute automaticamente**.
+
+Apresente ao desenvolvedor:
+- Arquivos que serão commitados
+- Mensagem de commit sugerida
+- Aguarde confirmação antes de executar `git commit`
+
+### Formato de Commit
+
+```
+<type>(<scope>): <description>
+
+[body opcional]
+
+[footer opcional]
+```
+
+**Types permitidos:**
+- `feat`: nova funcionalidade
+- `fix`: correção de bug
+- `refactor`: refatoração sem mudança de comportamento
+- `test`: adição/modificação de testes
+- `docs`: documentação
+- `style`: formatação (não afeta lógica)
+- `chore`: tarefas de manutenção
+- `perf`: melhorias de performance
+
+**Scopes do projeto:** defina em `.cursor/rules/project-context.mdc`
+
+## Checklist Final
+
+Antes de apresentar o commit para confirmação:
+
+- [ ] Código implementado e sem erros de lint
+- [ ] Testes criados e passando
+- [ ] Documentação atualizada (ADR/CHANGELOG conforme necessário)
+- [ ] Mensagem de commit clara e no formato correto
