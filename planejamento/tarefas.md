@@ -87,11 +87,11 @@ Este documento detalha todas as tarefas necessárias para implementar o sistema 
 
 | # | Tarefa | Estimativa | Prioridade | Dependências | Entregável | Status |
 |---|--------|------------|------------|--------------|------------|--------|
-| 3.1 | Implementar Value Object Money | 3h | 🔴 Alta | Estrutura Domain criada | Classe `Money.php` completa | ⬜ |
-| 3.2 | Implementar Value Object Document (CPF/CNPJ) | 4h | 🔴 Alta | Estrutura Domain criada | Classe `Document.php` completa | ⬜ |
-| 3.3 | Implementar Value Object Email | 1h | 🔴 Alta | Estrutura Domain criada | Classe `Email.php` completa | ⬜ |
-| 3.4 | Implementar Value Object Uuid | 1h | 🔴 Alta | Estrutura Domain criada | Classe `Uuid.php` completa | ⬜ |
-| 3.5 | Criar testes unitários para Value Objects | 4h | 🔴 Alta | Value Objects implementados | Testes criados e passando | ⬜ |
+| 3.1 | Implementar Value Object Money | 3h | 🔴 Alta | Estrutura Domain criada | Classe `Money.php` completa | ✅ |
+| 3.2 | Implementar Value Object Document (CPF/CNPJ) | 4h | 🔴 Alta | Estrutura Domain criada | Classe `Document.php` completa | ✅ |
+| 3.3 | Implementar Value Object Email | 1h | 🔴 Alta | Estrutura Domain criada | Classe `Email.php` completa | ✅ |
+| 3.4 | Implementar Value Object Uuid | 1h | 🔴 Alta | Estrutura Domain criada | Classe `Uuid.php` completa | ✅ |
+| 3.5 | Criar testes unitários para Value Objects | 4h | 🔴 Alta | Value Objects implementados | Testes criados e passando | ✅ |
 | 3.6 | Implementar entidade User | 2h | 🔴 Alta | Value Objects criados | Classe `User.php` completa | ⬜ |
 | 3.7 | Implementar entidade Organization | 3h | 🔴 Alta | Value Objects criados | Classe `Organization.php` completa | ⬜ |
 | 3.8 | Implementar entidade Account | 3h | 🔴 Alta | Value Objects criados | Classe `Account.php` completa | ⬜ |
