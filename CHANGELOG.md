@@ -29,6 +29,18 @@ e este projeto adere ao [Semantic Versioning](https://semver.org/lang/pt-BR/).
   - Health checks para PostgreSQL e Redis
   - Volumes persistentes para dados do banco e Redis
   - Network isolada para comunicação entre serviços
+- Dockerfile para PHP-FPM criado em `docker/Dockerfile`
+  - Baseado em PHP 8.3-FPM Alpine
+  - Extensões: pdo_pgsql, redis, bcmath, intl, opcache, pcntl
+  - Composer instalado
+  - Usuário não-root configurado
+- Configurações PHP criadas em `docker/php/local.ini`
+  - Limites de upload e memória configurados
+  - OPcache otimizado para desenvolvimento
+- Configuração Nginx criada em `docker/nginx/default.conf`
+  - Proxy reverso para PHP-FPM
+  - Gzip habilitado
+  - Segurança básica configurada
 
 <!-- 
 ## [0.1.0] - YYYY-MM-DD
