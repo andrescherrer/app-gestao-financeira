@@ -38,6 +38,7 @@ Sistema de gestão financeira que permite aos usuários controlar suas finanças
 
 - **Backend:** Laravel (API REST)
 - **Frontend:** Nuxt 3 com Vue 3 e TypeScript
+- **UI Components:** shadcn-vue (componentes acessíveis e customizáveis)
 - **Banco de Dados:** PostgreSQL
 - **Cache:** Redis
 - **Queue:** Processamento assíncrono

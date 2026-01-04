@@ -55,6 +55,7 @@ Desenvolver uma **aplicação web completa de gestão financeira pessoal e empre
 - ✅ **Clean Architecture** com separação de camadas
 - ✅ **Backend:** Laravel (API REST)
 - ✅ **Frontend:** Nuxt 3 com Vue 3 e TypeScript
+- ✅ **UI Components:** shadcn-vue (componentes acessíveis e customizáveis)
 - ✅ **Banco de dados:** PostgreSQL
 - ✅ **Cache:** Redis
 - ✅ **Queue:** Processamento assíncrono

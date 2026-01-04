@@ -6,8 +6,8 @@ Este documento detalha todas as tarefas necessárias para implementar o sistema 
 
 **Duração Total:** 16 semanas (4 meses)  
 **Metodologia:** Desenvolvimento incremental com entregas semanais  
-**Total de Tarefas:** 251 tarefas  
-**Total de Horas Estimadas:** ~1.280 horas
+**Total de Tarefas:** 254 tarefas  
+**Total de Horas Estimadas:** ~1.288 horas
 
 ---
 
@@ -19,11 +19,11 @@ Este documento detalha todas as tarefas necessárias para implementar o sistema 
 | **Fase 2: Domain Identity e Account** | 3-4 | 44 | ~166h | ⏳ Pendente |
 | **Fase 3: Domain Transaction** | 5-6 | 36 | ~172h | ⏳ Pendente |
 | **Fase 4: Domain Planning** | 7-8 | 20 | ~100h | ⏳ Pendente |
-| **Fase 5: Frontend + Integração** | 9-10 | 25 | ~160h | ⏳ Pendente |
+| **Fase 5: Frontend + Integração** | 9-10 | 28 | ~168h | ⏳ Pendente |
 | **Fase 6: Segurança e Compliance** | 11-12 | 28 | ~180h | ⏳ Pendente |
 | **Fase 7: Observabilidade e Performance** | 13-14 | 24 | ~150h | ⏳ Pendente |
 | **Fase 8: Deploy e Infraestrutura** | 15-16 | 25 | ~200h | ⏳ Pendente |
-| **TOTAL** | **16** | **251** | **~1.280h** | **0%** |
+| **TOTAL** | **16** | **254** | **~1.288h** | **0%** |
 
 ---
 
@@ -239,20 +239,23 @@ Este documento detalha todas as tarefas necessárias para implementar o sistema 
 |---|--------|------------|------------|--------------|------------|--------|
 | 9.1 | Criar projeto Nuxt 3 com Vue 3 | 2h | 🔴 Alta | Nenhuma | Projeto criado | ⬜ |
 | 9.2 | Configurar TypeScript no Nuxt | 1h | 🔴 Alta | Projeto criado | TypeScript configurado | ⬜ |
-| 9.3 | Configurar roteamento do Nuxt | 1h | 🔴 Alta | Projeto criado | Roteamento configurado | ⬜ |
-| 9.4 | Configurar gerenciamento de estado (Pinia) | 2h | 🔴 Alta | Projeto criado | Estado configurado | ⬜ |
-| 9.5 | Configurar cliente HTTP ($fetch/Axios) | 1h | 🔴 Alta | Projeto criado | Cliente configurado | ⬜ |
-| 9.6 | Criar página de login | 2h | 🔴 Alta | Frontend configurado | Página criada | ⬜ |
-| 9.7 | Criar página de registro | 2h | 🔴 Alta | Frontend configurado | Página criada | ⬜ |
-| 9.8 | Implementar gerenciamento de token | 2h | 🔴 Alta | Autenticação funcionando | Token gerenciado | ⬜ |
-| 9.9 | Criar middleware de autenticação (Nuxt) | 1h | 🔴 Alta | Token gerenciado | Middleware criado | ⬜ |
-| 9.10 | Implementar refresh token | 2h | 🟡 Média | Autenticação funcionando | Refresh implementado | ⬜ |
-| 9.11 | Criar layout base | 2h | 🔴 Alta | Frontend configurado | Layout criado | ⬜ |
-| 9.12 | Criar componente de saldo global | 2h | 🔴 Alta | API funcionando | Componente criado | ⬜ |
-| 9.13 | Criar gráfico de receitas vs despesas | 3h | 🟡 Média | API funcionando | Gráfico criado | ⬜ |
-| 9.14 | Criar lista de transações recentes | 2h | 🔴 Alta | API funcionando | Lista criada | ⬜ |
+| 9.3 | Instalar e configurar Tailwind CSS | 1h | 🔴 Alta | Projeto criado | Tailwind configurado | ⬜ |
+| 9.4 | Instalar e configurar shadcn-vue | 2h | 🔴 Alta | Tailwind configurado | shadcn-vue configurado | ⬜ |
+| 9.5 | Adicionar componentes base do shadcn-vue | 2h | 🔴 Alta | shadcn-vue configurado | Componentes base instalados | ⬜ |
+| 9.6 | Configurar roteamento do Nuxt | 1h | 🔴 Alta | Projeto criado | Roteamento configurado | ⬜ |
+| 9.7 | Configurar gerenciamento de estado (Pinia) | 2h | 🔴 Alta | Projeto criado | Estado configurado | ⬜ |
+| 9.8 | Configurar cliente HTTP ($fetch/Axios) | 1h | 🔴 Alta | Projeto criado | Cliente configurado | ⬜ |
+| 9.9 | Criar página de login (com shadcn-vue) | 2h | 🔴 Alta | Componentes base instalados | Página criada | ⬜ |
+| 9.10 | Criar página de registro (com shadcn-vue) | 2h | 🔴 Alta | Componentes base instalados | Página criada | ⬜ |
+| 9.11 | Implementar gerenciamento de token | 2h | 🔴 Alta | Autenticação funcionando | Token gerenciado | ⬜ |
+| 9.12 | Criar middleware de autenticação (Nuxt) | 1h | 🔴 Alta | Token gerenciado | Middleware criado | ⬜ |
+| 9.13 | Implementar refresh token | 2h | 🟡 Média | Autenticação funcionando | Refresh implementado | ⬜ |
+| 9.14 | Criar layout base (com shadcn-vue) | 2h | 🔴 Alta | Componentes base instalados | Layout criado | ⬜ |
+| 9.15 | Criar componente de saldo global | 2h | 🔴 Alta | API funcionando | Componente criado | ⬜ |
+| 9.16 | Criar gráfico de receitas vs despesas | 3h | 🟡 Média | API funcionando | Gráfico criado | ⬜ |
+| 9.17 | Criar lista de transações recentes | 2h | 🔴 Alta | API funcionando | Lista criada | ⬜ |
 
-**Total Semana 9:** 14 tarefas | ~25h | 🔴 Alta: 11 | 🟡 Média: 3
+**Total Semana 9:** 17 tarefas | ~28h | 🔴 Alta: 13 | 🟡 Média: 4
 
 ---
 
@@ -260,10 +263,10 @@ Este documento detalha todas as tarefas necessárias para implementar o sistema 
 
 | # | Tarefa | Estimativa | Prioridade | Dependências | Entregável | Status |
 |---|--------|------------|------------|--------------|------------|--------|
-| 10.1 | Criar componente de entrada rápida | 3h | 🔴 Alta | API funcionando | Componente criado | ⬜ |
-| 10.2 | Implementar seleção de categoria | 2h | 🔴 Alta | Componente criado | Seleção funcionando | ⬜ |
-| 10.3 | Implementar seleção de conta | 1h | 🔴 Alta | Componente criado | Seleção funcionando | ⬜ |
-| 10.4 | Adicionar validação no frontend | 2h | 🔴 Alta | Formulário criado | Validação funcionando | ⬜ |
+| 10.1 | Criar componente de entrada rápida (com shadcn-vue) | 3h | 🔴 Alta | API funcionando | Componente criado | ⬜ |
+| 10.2 | Implementar seleção de categoria (Select shadcn-vue) | 2h | 🔴 Alta | Componente criado | Seleção funcionando | ⬜ |
+| 10.3 | Implementar seleção de conta (Select shadcn-vue) | 1h | 🔴 Alta | Componente criado | Seleção funcionando | ⬜ |
+| 10.4 | Adicionar validação no frontend (com shadcn-vue) | 2h | 🔴 Alta | Formulário criado | Validação funcionando | ⬜ |
 | 10.5 | Criar componente de listagem | 3h | 🔴 Alta | API funcionando | Componente criado | ⬜ |
 | 10.6 | Implementar paginação | 2h | 🔴 Alta | Listagem criada | Paginação funcionando | ⬜ |
 | 10.7 | Implementar filtros | 3h | 🟡 Média | Listagem criada | Filtros funcionando | ⬜ |
@@ -425,10 +428,10 @@ Este documento detalha todas as tarefas necessárias para implementar o sistema 
 
 | Prioridade | Quantidade | % do Total | Total de Horas |
 |------------|------------|------------|----------------|
-| 🔴 **Alta** | 159 | 63% | ~820h |
-| 🟡 **Média** | 72 | 29% | ~360h |
+| 🔴 **Alta** | 162 | 64% | ~828h |
+| 🟡 **Média** | 72 | 28% | ~360h |
 | 🟢 **Baixa** | 20 | 8% | ~100h |
-| **TOTAL** | **251** | **100%** | **~1.280h** |
+| **TOTAL** | **254** | **100%** | **~1.288h** |
 
 ### Estimativas de Tempo
 
@@ -475,10 +478,16 @@ Este documento detalha todas as tarefas necessárias para implementar o sistema 
 ### Atualização Semanal
 
 **Última atualização:** Janeiro/2026  
-**Versão:** 2.1  
+**Versão:** 2.2  
 **Próxima revisão:** Após conclusão de cada semana
 
 ### Changelog
+
+**v2.2 (Janeiro/2026):**
+- ✅ Adicionadas tarefas para setup do shadcn-vue (Semana 9)
+- ✅ Adicionadas tarefas para Tailwind CSS e componentes UI
+- ✅ Atualizado total de tarefas: 251 → 254
+- ✅ Atualizado total de horas: ~1.280h → ~1.288h
 
 **v2.1 (Janeiro/2026):**
 - ✅ Adicionadas tarefas para tipo de conta "Empréstimo" (Semanas 3-4)

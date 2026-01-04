@@ -12,6 +12,7 @@
 - [8. Estratégia de Feature Flags](#8-estratégia-de-feature-flags)
 - [9. API Endpoints](#9-api-endpoints)
 - [9.1 Importação de Transações via OFX](#91-importação-de-transações-via-ofx)
+- [9.2 Frontend e Componentes UI](#92-frontend-e-componentes-ui)
 - [10. Otimizações de Alta Performance](#10-otimizações-de-alta-performance)
 - [11. Segurança e Autenticação](#11-segurança-e-autenticação)
 - [12. Testes e Qualidade](#12-testes-e-qualidade)
@@ -2378,6 +2379,179 @@ Content-Type: multipart/form-data
 
 ---
 
+## 9.2 Frontend e Componentes UI
+
+### Stack do Frontend
+
+O frontend será desenvolvido utilizando **Nuxt 3** com **Vue 3** e **TypeScript**, proporcionando uma experiência moderna, performática e type-safe.
+
+### Biblioteca de Componentes: shadcn-vue
+
+Para garantir uma interface consistente, acessível e customizável, utilizaremos **shadcn-vue**, uma biblioteca de componentes UI baseada em Radix Vue.
+
+#### Por que shadcn-vue?
+
+- ✅ **Componentes acessíveis:** Baseados em Radix Vue, seguem padrões WAI-ARIA
+- ✅ **Totalmente customizáveis:** Componentes copiados para o projeto, não dependências
+- ✅ **TypeScript nativo:** Suporte completo a tipos
+- ✅ **Design system consistente:** Baseado em Tailwind CSS
+- ✅ **Fácil manutenção:** Componentes no seu código, não em node_modules
+
+#### Componentes Principais a Utilizar
+
+- **Formulários:** Input, Select, Textarea, Checkbox, Radio, Switch
+- **Navegação:** Button, Link, Breadcrumb, Tabs, Menu
+- **Feedback:** Alert, Toast, Dialog, Sheet, Popover
+- **Dados:** Table, Card, Badge, Avatar, Progress
+- **Layout:** Separator, Skeleton, Accordion, Collapsible
+
+#### Estrutura de Setup
+
+```bash
+# Instalar shadcn-vue
+npx shadcn-vue@latest init
+
+# Adicionar componentes conforme necessário
+npx shadcn-vue@latest add button
+npx shadcn-vue@latest add input
+npx shadcn-vue@latest add card
+npx shadcn-vue@latest add table
+npx shadcn-vue@latest add dialog
+npx shadcn-vue@latest add toast
+```
+
+#### Configuração no Nuxt 3
+
+```typescript
+// nuxt.config.ts
+export default defineNuxtConfig({
+  modules: [
+    '@nuxtjs/tailwindcss',
+    '@vueuse/nuxt',
+  ],
+  css: ['~/assets/css/main.css'],
+  // Configuração do shadcn-vue
+  components: [
+    {
+      path: '~/components/ui',
+      pathPrefix: false,
+    },
+  ],
+})
+```
+
+#### Exemplo de Uso
+
+```vue
+<template>
+  <Card>
+    <CardHeader>
+      <CardTitle>Nova Transação</CardTitle>
+      <CardDescription>Adicione uma nova transação financeira</CardDescription>
+    </CardHeader>
+    <CardContent>
+      <form @submit.prevent="handleSubmit">
+        <div class="space-y-4">
+          <div>
+            <Label for="amount">Valor</Label>
+            <Input
+              id="amount"
+              v-model="form.amount"
+              type="number"
+              placeholder="0.00"
+            />
+          </div>
+          <div>
+            <Label for="description">Descrição</Label>
+            <Textarea
+              id="description"
+              v-model="form.description"
+              placeholder="Descreva a transação..."
+            />
+          </div>
+          <Button type="submit" :disabled="isSubmitting">
+            Salvar Transação
+          </Button>
+        </div>
+      </form>
+    </CardContent>
+  </Card>
+</template>
+```
+
+#### Integração com Pinia
+
+```typescript
+// stores/transactions.ts
+import { defineStore } from 'pinia'
+import { useToast } from '@/components/ui/toast'
+
+export const useTransactionStore = defineStore('transactions', {
+  actions: {
+    async createTransaction(data: CreateTransactionDto) {
+      try {
+        const response = await $fetch('/api/v1/transactions', {
+          method: 'POST',
+          body: data,
+        })
+        
+        const { toast } = useToast()
+        toast({
+          title: 'Sucesso',
+          description: 'Transação criada com sucesso',
+        })
+        
+        return response
+      } catch (error) {
+        const { toast } = useToast()
+        toast({
+          title: 'Erro',
+          description: 'Falha ao criar transação',
+          variant: 'destructive',
+        })
+        throw error
+      }
+    },
+  },
+})
+```
+
+#### Temas e Customização
+
+shadcn-vue utiliza CSS variables para temas, permitindo fácil customização:
+
+```css
+/* assets/css/main.css */
+@layer base {
+  :root {
+    --background: 0 0% 100%;
+    --foreground: 222.2 84% 4.9%;
+    --primary: 221.2 83.2% 53.3%;
+    --primary-foreground: 210 40% 98%;
+    /* ... mais variáveis */
+  }
+  
+  .dark {
+    --background: 222.2 84% 4.9%;
+    --foreground: 210 40% 98%;
+    /* ... tema escuro */
+  }
+}
+```
+
+#### Componentes Customizados
+
+Além dos componentes base do shadcn-vue, criaremos componentes específicos do domínio:
+
+- `TransactionForm.vue` - Formulário de transação
+- `AccountCard.vue` - Card de conta
+- `BalanceDisplay.vue` - Exibição de saldo
+- `GoalProgress.vue` - Progresso de meta
+- `TransactionList.vue` - Lista de transações
+- `CategorySelector.vue` - Seletor de categoria
+
+---
+
 ## 10. Otimizações de Alta Performance
 
 ### 10.1 Estratégia de Cache Multi-Camada
@@ -4352,6 +4526,7 @@ public function detailed(): JsonResponse
 ### Fase 5: Frontend + Integração (Semanas 9-10)
 
 - [ ] Setup projeto frontend (Nuxt 3 + Vue 3)
+- [ ] Configurar shadcn-vue (biblioteca de componentes UI)
 - [ ] Implementar autenticação
 - [ ] Dashboard principal
 - [ ] Formulário de entrada rápida
