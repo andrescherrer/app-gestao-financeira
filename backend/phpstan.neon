@@ -1,0 +1,24 @@
+includes:
+    - vendor/larastan/larastan/extension.neon
+
+parameters:
+    paths:
+        - app
+
+    # Rule level (0-9, higher is stricter)
+    level: 5
+
+    ignoreErrors:
+        - '#PHPDoc tag @var#'
+
+    excludePaths:
+        - ./*/*/FileToIgnore.php
+
+    checkMissingIterableValueType: false
+    checkGenericClassInNonGenericObjectType: false
+
+    # Laravel specific
+    checkModelProperties: true
+    checkModelAccessorAttributeTypes: true
+    checkModelMutatorAttributeTypes: true
+

@@ -51,6 +51,14 @@ e este projeto adere ao [Semantic Versioning](https://semver.org/lang/pt-BR/).
   - Infrastructure: Persistence, Bus, Cache, FeatureFlags, Jobs, Services
   - Interfaces: Http (Controllers, Requests, Resources, Middleware), Console
   - Total de 66 diretórios criados conforme planejamento
+- Ferramentas de qualidade de código instaladas e configuradas
+  - PHPStan instalado com Larastan (nível 5)
+  - Arquivo `phpstan.neon` configurado com regras para Laravel
+  - Laravel Pint configurado com preset Laravel
+  - Arquivo `pint.json` criado
+  - Pest instalado com plugin Laravel
+  - Arquivo `tests/Pest.php` configurado
+  - Teste de exemplo criado e funcionando
 
 <!-- 
 ## [0.1.0] - YYYY-MM-DD

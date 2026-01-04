@@ -53,13 +53,13 @@ Este documento detalha todas as tarefas necessárias para implementar o sistema 
 
 | # | Tarefa | Estimativa | Prioridade | Dependências | Entregável | Status |
 |---|--------|------------|------------|--------------|------------|--------|
-| 2.1 | Instalar PHPStan | 30 min | 🔴 Alta | Projeto Laravel | PHPStan instalado e configurado | ⬜ |
-| 2.2 | Configurar regras PHPStan | 1h | 🟡 Média | PHPStan instalado | `phpstan.neon` configurado | ⬜ |
-| 2.3 | Instalar e configurar Laravel Pint | 30 min | 🔴 Alta | Projeto Laravel | Pint instalado e configurado | ⬜ |
-| 2.4 | Criar regras de formatação | 30 min | 🟡 Média | Pint instalado | `pint.json` configurado | ⬜ |
-| 2.5 | Instalar Pest | 30 min | 🔴 Alta | Projeto Laravel | Pest instalado | ⬜ |
-| 2.6 | Configurar Pest | 1h | 🔴 Alta | Pest instalado | `tests/Pest.php` configurado | ⬜ |
-| 2.7 | Criar testes de exemplo | 1h | 🟡 Média | Pest configurado | Teste de exemplo funcionando | ⬜ |
+| 2.1 | Instalar PHPStan | 30 min | 🔴 Alta | Projeto Laravel | PHPStan instalado e configurado | ✅ |
+| 2.2 | Configurar regras PHPStan | 1h | 🟡 Média | PHPStan instalado | `phpstan.neon` configurado | ✅ |
+| 2.3 | Instalar e configurar Laravel Pint | 30 min | 🔴 Alta | Projeto Laravel | Pint instalado e configurado | ✅ |
+| 2.4 | Criar regras de formatação | 30 min | 🟡 Média | Pint instalado | `pint.json` configurado | ✅ |
+| 2.5 | Instalar Pest | 30 min | 🔴 Alta | Projeto Laravel | Pest instalado | ✅ |
+| 2.6 | Configurar Pest | 1h | 🔴 Alta | Pest instalado | `tests/Pest.php` configurado | ✅ |
+| 2.7 | Criar testes de exemplo | 1h | 🟡 Média | Pest configurado | Teste de exemplo funcionando | ✅ |
 | 2.8 | Criar workflow GitHub Actions para testes | 2h | 🔴 Alta | Repositório Git criado | `.github/workflows/ci.yml` criado | ⬜ |
 | 2.9 | Configurar serviços no CI (PostgreSQL, Redis) | 1h | 🔴 Alta | Workflow criado | CI rodando com serviços | ⬜ |
 | 2.10 | Adicionar job de lint (Pint) | 30 min | 🟡 Média | CI básico funcionando | Job de lint no CI | ⬜ |
