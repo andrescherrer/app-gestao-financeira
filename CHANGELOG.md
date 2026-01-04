@@ -12,6 +12,11 @@ e este projeto adere ao [Semantic Versioning](https://semver.org/lang/pt-BR/).
 - Configuração inicial do projeto
 - Projeto Laravel instalado via Composer (v12.44.0)
 - Estrutura base do backend criada em `backend/`
+- Arquivo `.env` configurado com variáveis de ambiente do projeto
+  - PostgreSQL como banco de dados padrão
+  - Redis para cache, sessões e filas
+  - Locale configurado para pt_BR
+  - APP_KEY gerada automaticamente
 
 <!-- 
 ## [0.1.0] - YYYY-MM-DD
