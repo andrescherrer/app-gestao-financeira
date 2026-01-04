@@ -9,6 +9,27 @@ e este projeto adere ao [Semantic Versioning](https://semver.org/lang/pt-BR/).
 
 ### Added
 
+- Value Objects implementados (Semana 3 - Tarefas 3.1-3.5)
+  - Value Object `Money` para operações monetárias
+    - Suporte a centavos e decimais
+    - Operações: add, subtract, multiply
+    - Comparações e formatação
+    - Validação de moedas
+  - Value Object `Document` para CPF/CNPJ
+    - Validação completa de CPF e CNPJ
+    - Formatação automática
+    - Detecção automática do tipo
+  - Value Object `Email` para endereços de email
+    - Validação com filter_var
+    - Imutável e type-safe
+  - Value Object `Uuid` para identificadores únicos
+    - Integração com ramsey/uuid
+    - Geração e validação de UUIDs
+  - Testes unitários completos para todos os Value Objects
+    - 36 testes passando (66 assertions)
+    - Cobertura: Money 100%, Document 96.4%, Email 100%, Uuid 100%
+  - Dependência `ramsey/uuid` adicionada ao projeto
+
 - Configuração inicial do projeto
 - Projeto Laravel instalado via Composer (v12.44.0)
 - Estrutura base do backend criada em `backend/`

@@ -1,0 +1,38 @@
+<?php
+
+declare(strict_types=1);
+
+namespace App\Domain\Identity\ValueObjects;
+
+use InvalidArgumentException;
+
+final class Email
+{
+    private function __construct(
+        private readonly string $value
+    ) {
+        if (! filter_var($this->value, FILTER_VALIDATE_EMAIL)) {
+            throw new InvalidArgumentException("Invalid email address: {$this->value}");
+        }
+    }
+
+    public static function fromString(string $email): self
+    {
+        return new self($email);
+    }
+
+    public function value(): string
+    {
+        return $this->value;
+    }
+
+    public function equals(Email $other): bool
+    {
+        return $this->value === $other->value;
+    }
+
+    public function __toString(): string
+    {
+        return $this->value;
+    }
+}
