@@ -44,7 +44,7 @@ Este documento compara os requisitos esperados do sistema com o que foi planejad
 
 #### Implementações Planejadas
 - ✅ **Entrada rápida:** Endpoint `/transactions/quick` para inserção simplificada
-- ✅ **Frontend moderno:** React/Vue com TypeScript
+- ✅ **Frontend moderno:** Nuxt 3 com Vue 3 e TypeScript
 - ✅ **Interface responsiva:** Otimizada para mobile
 - ✅ **Categorização visual:** Categorias com ícones e cores
 - ✅ **Dashboard intuitivo:** Saldo global, gráficos, transações recentes

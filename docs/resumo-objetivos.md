@@ -54,7 +54,7 @@ Desenvolver uma **aplicação web completa de gestão financeira pessoal e empre
 - ✅ **Domain-Driven Design (DDD)** com Bounded Contexts
 - ✅ **Clean Architecture** com separação de camadas
 - ✅ **Backend:** Laravel (API REST)
-- ✅ **Frontend:** React/Vue com TypeScript (SPA)
+- ✅ **Frontend:** Nuxt 3 com Vue 3 e TypeScript
 - ✅ **Banco de dados:** PostgreSQL
 - ✅ **Cache:** Redis
 - ✅ **Queue:** Processamento assíncrono

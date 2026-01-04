@@ -237,15 +237,15 @@ Este documento detalha todas as tarefas necessárias para implementar o sistema 
 
 | # | Tarefa | Estimativa | Prioridade | Dependências | Entregável | Status |
 |---|--------|------------|------------|--------------|------------|--------|
-| 9.1 | Criar projeto React/Vue | 2h | 🔴 Alta | Nenhuma | Projeto criado | ⬜ |
-| 9.2 | Configurar TypeScript | 1h | 🔴 Alta | Projeto criado | TypeScript configurado | ⬜ |
-| 9.3 | Configurar roteamento | 1h | 🔴 Alta | Projeto criado | Roteamento configurado | ⬜ |
-| 9.4 | Configurar gerenciamento de estado | 2h | 🔴 Alta | Projeto criado | Estado configurado | ⬜ |
-| 9.5 | Configurar cliente HTTP (Axios/Fetch) | 1h | 🔴 Alta | Projeto criado | Cliente configurado | ⬜ |
+| 9.1 | Criar projeto Nuxt 3 com Vue 3 | 2h | 🔴 Alta | Nenhuma | Projeto criado | ⬜ |
+| 9.2 | Configurar TypeScript no Nuxt | 1h | 🔴 Alta | Projeto criado | TypeScript configurado | ⬜ |
+| 9.3 | Configurar roteamento do Nuxt | 1h | 🔴 Alta | Projeto criado | Roteamento configurado | ⬜ |
+| 9.4 | Configurar gerenciamento de estado (Pinia) | 2h | 🔴 Alta | Projeto criado | Estado configurado | ⬜ |
+| 9.5 | Configurar cliente HTTP ($fetch/Axios) | 1h | 🔴 Alta | Projeto criado | Cliente configurado | ⬜ |
 | 9.6 | Criar página de login | 2h | 🔴 Alta | Frontend configurado | Página criada | ⬜ |
 | 9.7 | Criar página de registro | 2h | 🔴 Alta | Frontend configurado | Página criada | ⬜ |
 | 9.8 | Implementar gerenciamento de token | 2h | 🔴 Alta | Autenticação funcionando | Token gerenciado | ⬜ |
-| 9.9 | Criar middleware de autenticação | 1h | 🔴 Alta | Token gerenciado | Middleware criado | ⬜ |
+| 9.9 | Criar middleware de autenticação (Nuxt) | 1h | 🔴 Alta | Token gerenciado | Middleware criado | ⬜ |
 | 9.10 | Implementar refresh token | 2h | 🟡 Média | Autenticação funcionando | Refresh implementado | ⬜ |
 | 9.11 | Criar layout base | 2h | 🔴 Alta | Frontend configurado | Layout criado | ⬜ |
 | 9.12 | Criar componente de saldo global | 2h | 🔴 Alta | API funcionando | Componente criado | ⬜ |

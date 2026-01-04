@@ -56,8 +56,8 @@
 
 ```
 ┌─────────────────────────────────────────────────────────────────────┐
-│                         FRONTEND (SPA)                              │
-│                    React/Vue + TypeScript                           │
+│                         FRONTEND                                     │
+│                    Nuxt 3 + Vue 3 + TypeScript                      │
 └─────────────────────────────────────────────────────────────────────┘
                                   │
                                   ▼
@@ -4351,7 +4351,7 @@ public function detailed(): JsonResponse
 
 ### Fase 5: Frontend + Integração (Semanas 9-10)
 
-- [ ] Setup projeto frontend (React/Vue)
+- [ ] Setup projeto frontend (Nuxt 3 + Vue 3)
 - [ ] Implementar autenticação
 - [ ] Dashboard principal
 - [ ] Formulário de entrada rápida
