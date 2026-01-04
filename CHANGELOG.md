@@ -17,6 +17,12 @@ e este projeto adere ao [Semantic Versioning](https://semver.org/lang/pt-BR/).
   - Redis para cache, sessões e filas
   - Locale configurado para pt_BR
   - APP_KEY gerada automaticamente
+- Namespaces e autoload configurados para arquitetura DDD
+  - `App\Domain\` para camada de domínio
+  - `App\Application\` para camada de aplicação
+  - `App\Infrastructure\` para camada de infraestrutura
+  - `App\Interfaces\` para camada de interface
+  - Estrutura de diretórios criada conforme planejamento
 
 <!-- 
 ## [0.1.0] - YYYY-MM-DD
