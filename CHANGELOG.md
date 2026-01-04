@@ -82,6 +82,12 @@ e este projeto adere ao [Semantic Versioning](https://semver.org/lang/pt-BR/).
   - Script de backup criado (`scripts/backup.sh`)
   - Retenção de backups configurada (30 dias por padrão)
 
+### Fixed
+
+- Corrigido Dockerfile para usar PHP 8.4 (requerido pelo Laravel 12)
+- Removido atributo `version` obsoleto do docker-compose.yml
+- Health endpoint validado e funcionando corretamente
+
 <!-- 
 ## [0.1.0] - YYYY-MM-DD
 
