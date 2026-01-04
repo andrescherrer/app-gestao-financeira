@@ -60,24 +60,24 @@ Este documento detalha todas as tarefas necessárias para implementar o sistema 
 | 2.5 | Instalar Pest | 30 min | 🔴 Alta | Projeto Laravel | Pest instalado | ✅ |
 | 2.6 | Configurar Pest | 1h | 🔴 Alta | Pest instalado | `tests/Pest.php` configurado | ✅ |
 | 2.7 | Criar testes de exemplo | 1h | 🟡 Média | Pest configurado | Teste de exemplo funcionando | ✅ |
-| 2.8 | Criar workflow GitHub Actions para testes | 2h | 🔴 Alta | Repositório Git criado | `.github/workflows/ci.yml` criado | ⬜ |
-| 2.9 | Configurar serviços no CI (PostgreSQL, Redis) | 1h | 🔴 Alta | Workflow criado | CI rodando com serviços | ⬜ |
-| 2.10 | Adicionar job de lint (Pint) | 30 min | 🟡 Média | CI básico funcionando | Job de lint no CI | ⬜ |
-| 2.11 | Adicionar job de análise estática (PHPStan) | 30 min | 🟡 Média | CI básico funcionando | Job de PHPStan no CI | ⬜ |
-| 2.12 | Instalar Laravel Pennant | 30 min | 🔴 Alta | Projeto Laravel | Pennant instalado | ⬜ |
-| 2.13 | Publicar migrations do Pennant | 15 min | 🔴 Alta | Pennant instalado | Migrations publicadas | ⬜ |
-| 2.14 | Criar FeatureFlagServiceProvider | 1h | 🔴 Alta | Pennant instalado | Provider criado | ⬜ |
-| 2.15 | Definir features iniciais | 1h | 🟡 Média | Provider criado | Features definidas | ⬜ |
-| 2.16 | Configurar canais de log | 1h | 🔴 Alta | Projeto Laravel | `config/logging.php` configurado | ⬜ |
-| 2.17 | Criar StructuredLogger | 2h | 🔴 Alta | Canais configurados | Classe StructuredLogger criada | ⬜ |
-| 2.18 | Configurar rotação de logs | 30 min | 🟡 Média | Logging configurado | Rotação configurada | ⬜ |
-| 2.19 | Criar HealthController | 1h | 🔴 Alta | Projeto Laravel | Controller criado | ⬜ |
-| 2.20 | Implementar check de database | 30 min | 🔴 Alta | HealthController criado | Check de DB funcionando | ⬜ |
-| 2.21 | Implementar check de Redis | 30 min | 🔴 Alta | HealthController criado | Check de Redis funcionando | ⬜ |
-| 2.22 | Criar rota `/health` | 15 min | 🔴 Alta | HealthController criado | Rota funcionando | ⬜ |
-| 2.23 | Criar serviço de backup no docker-compose | 1h | 🔴 Alta | Docker configurado | Serviço de backup no compose | ⬜ |
-| 2.24 | Criar script de backup | 1h | 🔴 Alta | Serviço criado | Script `backup.sh` criado | ⬜ |
-| 2.25 | Configurar retenção de backups | 30 min | 🟡 Média | Script criado | Retenção configurada | ⬜ |
+| 2.8 | Criar workflow GitHub Actions para testes | 2h | 🔴 Alta | Repositório Git criado | `.github/workflows/ci.yml` criado | ✅ |
+| 2.9 | Configurar serviços no CI (PostgreSQL, Redis) | 1h | 🔴 Alta | Workflow criado | CI rodando com serviços | ✅ |
+| 2.10 | Adicionar job de lint (Pint) | 30 min | 🟡 Média | CI básico funcionando | Job de lint no CI | ✅ |
+| 2.11 | Adicionar job de análise estática (PHPStan) | 30 min | 🟡 Média | CI básico funcionando | Job de PHPStan no CI | ✅ |
+| 2.12 | Instalar Laravel Pennant | 30 min | 🔴 Alta | Projeto Laravel | Pennant instalado | ✅ |
+| 2.13 | Publicar migrations do Pennant | 15 min | 🔴 Alta | Pennant instalado | Migrations publicadas | ✅ |
+| 2.14 | Criar FeatureFlagServiceProvider | 1h | 🔴 Alta | Pennant instalado | Provider criado | ✅ |
+| 2.15 | Definir features iniciais | 1h | 🟡 Média | Provider criado | Features definidas | ✅ |
+| 2.16 | Configurar canais de log | 1h | 🔴 Alta | Projeto Laravel | `config/logging.php` configurado | ✅ |
+| 2.17 | Criar StructuredLogger | 2h | 🔴 Alta | Canais configurados | Classe StructuredLogger criada | ✅ |
+| 2.18 | Configurar rotação de logs | 30 min | 🟡 Média | Logging configurado | Rotação configurada | ✅ |
+| 2.19 | Criar HealthController | 1h | 🔴 Alta | Projeto Laravel | Controller criado | ✅ |
+| 2.20 | Implementar check de database | 30 min | 🔴 Alta | HealthController criado | Check de DB funcionando | ✅ |
+| 2.21 | Implementar check de Redis | 30 min | 🔴 Alta | HealthController criado | Check de Redis funcionando | ✅ |
+| 2.22 | Criar rota `/health` | 15 min | 🔴 Alta | HealthController criado | Rota funcionando | ✅ |
+| 2.23 | Criar serviço de backup no docker-compose | 1h | 🔴 Alta | Docker configurado | Serviço de backup no compose | ✅ |
+| 2.24 | Criar script de backup | 1h | 🔴 Alta | Serviço criado | Script `backup.sh` criado | ✅ |
+| 2.25 | Configurar retenção de backups | 30 min | 🟡 Média | Script criado | Retenção configurada | ✅ |
 
 **Total Semana 2:** 25 tarefas | ~18h | 🔴 Alta: 18 | 🟡 Média: 7
 

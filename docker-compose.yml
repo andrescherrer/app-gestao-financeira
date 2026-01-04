@@ -119,6 +119,34 @@ services:
       - REDIS_HOST=redis
       - REDIS_PORT=6379
 
+  # Backup Service
+  backup:
+    image: postgres:16-alpine
+    container_name: finance_backup
+    restart: "no"
+    volumes:
+      - ./backups:/backups
+      - ./scripts/backup.sh:/scripts/backup.sh:ro
+    networks:
+      - finance_network
+    depends_on:
+      db:
+        condition: service_healthy
+    environment:
+      - PGHOST=db
+      - PGPORT=5432
+      - PGDATABASE=${DB_DATABASE:-finance_db}
+      - PGUSER=${DB_USERNAME:-finance}
+      - PGPASSWORD=${DB_PASSWORD:-secret}
+      - BACKUP_RETENTION_DAYS=30
+    command: >
+      sh -c "
+        apk add --no-cache postgresql-client &&
+        chmod +x /scripts/backup.sh &&
+        /scripts/backup.sh
+      "
+    entrypoint: /bin/sh
+
 networks:
   finance_network:
     driver: bridge

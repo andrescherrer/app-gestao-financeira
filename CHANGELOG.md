@@ -59,6 +59,28 @@ e este projeto adere ao [Semantic Versioning](https://semver.org/lang/pt-BR/).
   - Pest instalado com plugin Laravel
   - Arquivo `tests/Pest.php` configurado
   - Teste de exemplo criado e funcionando
+- CI/CD Pipeline configurado
+  - Workflow GitHub Actions criado (`.github/workflows/ci.yml`)
+  - Serviços PostgreSQL e Redis configurados no CI
+  - Jobs de lint (Pint) e análise estática (PHPStan) adicionados
+  - Testes automatizados com cobertura mínima de 80%
+- Feature Flags configurados
+  - Laravel Pennant instalado
+  - Migrations do Pennant publicadas
+  - FeatureFlagServiceProvider criado com features iniciais
+  - Features: new-dashboard, quick-transaction-v2, ofx-import, loan-accounts
+- Logging estruturado implementado
+  - Canais de log configurados: application, security, performance
+  - StructuredLogger criado com métodos para eventos específicos
+  - Rotação de logs configurada (14 dias para application, 90 dias para security)
+- Health Checks implementados
+  - HealthController criado com checks de database, Redis e queue
+  - Rota `/api/health` configurada
+  - Retorna status 200 (healthy) ou 503 (unhealthy)
+- Sistema de backup configurado
+  - Serviço de backup adicionado ao docker-compose.yml
+  - Script de backup criado (`scripts/backup.sh`)
+  - Retenção de backups configurada (30 dias por padrão)
 
 <!-- 
 ## [0.1.0] - YYYY-MM-DD
