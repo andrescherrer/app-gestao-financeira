@@ -41,6 +41,16 @@ e este projeto adere ao [Semantic Versioning](https://semver.org/lang/pt-BR/).
   - Proxy reverso para PHP-FPM
   - Gzip habilitado
   - Segurança básica configurada
+- Validação e testes do ambiente Docker
+  - Nginx, PostgreSQL e Redis validados no docker-compose.yml
+  - Script de teste criado (`scripts/test-docker.sh`)
+  - Health checks configurados para PostgreSQL e Redis
+- Estrutura completa de pastas DDD criada
+  - Domain: Identity, Account, Transaction, Planning, Shared (com subpastas)
+  - Application: Commands, Queries, Bus, DTOs por domínio
+  - Infrastructure: Persistence, Bus, Cache, FeatureFlags, Jobs, Services
+  - Interfaces: Http (Controllers, Requests, Resources, Middleware), Console
+  - Total de 66 diretórios criados conforme planejamento
 
 <!-- 
 ## [0.1.0] - YYYY-MM-DD

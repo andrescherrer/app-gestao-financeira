@@ -36,14 +36,14 @@ Este documento detalha todas as tarefas necessárias para implementar o sistema 
 | 1.3 | Configurar namespace e autoload | 30 min | 🟡 Média | Projeto Laravel criado | `composer.json` atualizado | ✅ |
 | 1.4 | Criar `docker-compose.yml` | 2h | 🔴 Alta | Nenhuma | Arquivo `docker-compose.yml` criado | ✅ |
 | 1.5 | Criar Dockerfile para PHP-FPM | 1h | 🔴 Alta | Nenhuma | `docker/Dockerfile` criado | ✅ |
-| 1.6 | Configurar Nginx | 1h | 🔴 Alta | Dockerfile criado | `docker/nginx/default.conf` configurado | ⬜ |
-| 1.7 | Configurar PostgreSQL no Docker | 30 min | 🔴 Alta | docker-compose.yml | Container PostgreSQL funcionando | ⬜ |
-| 1.8 | Configurar Redis no Docker | 30 min | 🔴 Alta | docker-compose.yml | Container Redis funcionando | ⬜ |
-| 1.9 | Testar ambiente Docker completo | 1h | 🔴 Alta | Todos os containers configurados | Ambiente rodando localmente | ⬜ |
-| 1.10 | Criar estrutura de pastas Domain | 2h | 🔴 Alta | Projeto Laravel criado | Estrutura Domain criada | ⬜ |
-| 1.11 | Criar estrutura de pastas Application | 1h | 🔴 Alta | Estrutura Domain criada | Estrutura Application criada | ⬜ |
-| 1.12 | Criar estrutura de pastas Infrastructure | 1h | 🔴 Alta | Estrutura Application criada | Estrutura Infrastructure criada | ⬜ |
-| 1.13 | Criar estrutura de pastas Interfaces | 1h | 🔴 Alta | Estrutura Infrastructure criada | Estrutura Interfaces criada | ⬜ |
+| 1.6 | Configurar Nginx | 1h | 🔴 Alta | Dockerfile criado | `docker/nginx/default.conf` configurado | ✅ |
+| 1.7 | Configurar PostgreSQL no Docker | 30 min | 🔴 Alta | docker-compose.yml | Container PostgreSQL funcionando | ✅ |
+| 1.8 | Configurar Redis no Docker | 30 min | 🔴 Alta | docker-compose.yml | Container Redis funcionando | ✅ |
+| 1.9 | Testar ambiente Docker completo | 1h | 🔴 Alta | Todos os containers configurados | Ambiente rodando localmente | ✅ |
+| 1.10 | Criar estrutura de pastas Domain | 2h | 🔴 Alta | Projeto Laravel criado | Estrutura Domain criada | ✅ |
+| 1.11 | Criar estrutura de pastas Application | 1h | 🔴 Alta | Estrutura Domain criada | Estrutura Application criada | ✅ |
+| 1.12 | Criar estrutura de pastas Infrastructure | 1h | 🔴 Alta | Estrutura Application criada | Estrutura Infrastructure criada | ✅ |
+| 1.13 | Criar estrutura de pastas Interfaces | 1h | 🔴 Alta | Estrutura Infrastructure criada | Estrutura Interfaces criada | ✅ |
 
 **Total Semana 1:** 13 tarefas | ~13h | 🔴 Alta: 12 | 🟡 Média: 1
 
