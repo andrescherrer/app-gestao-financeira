@@ -122,16 +122,16 @@ Este documento detalha todas as tarefas necessárias para implementar o sistema 
 | 4.9 | Criar regra de validação StrongPassword | 1h | 🔴 Alta | Projeto Laravel | Regra criada | ✅ |
 | 4.10 | Aplicar regra no registro | 30 min | 🔴 Alta | Regra criada | Validação aplicada | ✅ |
 | 4.11 | Criar endpoint de alteração de senha | 1h | 🟡 Média | Autenticação funcionando | Endpoint criado | ✅ |
-| 4.12 | Criar AccountController | 2h | 🔴 Alta | Entidade Account criada | Controller criado | ⬜ |
-| 4.13 | Implementar listagem de contas | 1h | 🔴 Alta | AccountController criado | Endpoint GET /accounts | ⬜ |
-| 4.14 | Implementar criação de conta | 2h | 🔴 Alta | AccountController criado | Endpoint POST /accounts | ⬜ |
-| 4.15 | Implementar atualização de conta | 1h | 🔴 Alta | AccountController criado | Endpoint PUT /accounts/{id} | ⬜ |
-| 4.16 | Implementar exclusão de conta | 1h | 🔴 Alta | AccountController criado | Endpoint DELETE /accounts/{id} | ⬜ |
-| 4.17 | Implementar consulta de saldo | 2h | 🔴 Alta | AccountController criado | Endpoint GET /accounts/{id}/balance | ⬜ |
-| 4.18 | Criar AccountResource | 1h | 🟡 Média | Endpoints criados | Resource criado | ⬜ |
-| 4.19 | Implementar endpoint POST /accounts/{id}/lend | 2h | 🔴 Alta | AccountController criado | Endpoint de empréstimo criado | ⬜ |
-| 4.20 | Implementar endpoint GET /accounts/{id}/loans | 1h | 🔴 Alta | AccountController criado | Endpoint de listagem criado | ⬜ |
-| 4.21 | Implementar endpoint POST /accounts/{id}/repay | 2h | 🔴 Alta | AccountController criado | Endpoint de pagamento criado | ⬜ |
+| 4.12 | Criar AccountController | 2h | 🔴 Alta | Entidade Account criada | Controller criado | ✅ |
+| 4.13 | Implementar listagem de contas | 1h | 🔴 Alta | AccountController criado | Endpoint GET /accounts | ✅ |
+| 4.14 | Implementar criação de conta | 2h | 🔴 Alta | AccountController criado | Endpoint POST /accounts | ✅ |
+| 4.15 | Implementar atualização de conta | 1h | 🔴 Alta | AccountController criado | Endpoint PUT /accounts/{id} | ✅ |
+| 4.16 | Implementar exclusão de conta | 1h | 🔴 Alta | AccountController criado | Endpoint DELETE /accounts/{id} | ✅ |
+| 4.17 | Implementar consulta de saldo | 2h | 🔴 Alta | AccountController criado | Endpoint GET /accounts/{id}/balance | ✅ |
+| 4.18 | Criar AccountResource | 1h | 🟡 Média | Endpoints criados | Resource criado | ✅ |
+| 4.19 | Implementar endpoint POST /accounts/{id}/lend | 2h | 🔴 Alta | AccountController criado | Endpoint de empréstimo criado | ✅ |
+| 4.20 | Implementar endpoint GET /accounts/{id}/loans | 1h | 🔴 Alta | AccountController criado | Endpoint de listagem criado | ✅ |
+| 4.21 | Implementar endpoint POST /accounts/{id}/repay | 2h | 🔴 Alta | AccountController criado | Endpoint de pagamento criado | ✅ |
 | 4.22 | Criar testes para entidade User | 2h | 🔴 Alta | Entidade User criada | Testes criados | ⬜ |
 | 4.23 | Criar testes para entidade Organization | 2h | 🔴 Alta | Entidade Organization criada | Testes criados | ⬜ |
 | 4.24 | Criar testes para entidade Account | 2h | 🔴 Alta | Entidade Account criada | Testes criados | ⬜ |
