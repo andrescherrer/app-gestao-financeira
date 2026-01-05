@@ -111,17 +111,17 @@ Este documento detalha todas as tarefas necessárias para implementar o sistema 
 
 | # | Tarefa | Estimativa | Prioridade | Dependências | Entregável | Status |
 |---|--------|------------|------------|--------------|------------|--------|
-| 4.1 | Instalar Laravel Sanctum | 30 min | 🔴 Alta | Projeto Laravel | Sanctum instalado | ⬜ |
-| 4.2 | Publicar configuração do Sanctum | 15 min | 🔴 Alta | Sanctum instalado | Config publicado | ⬜ |
-| 4.3 | Criar AuthController | 3h | 🔴 Alta | Sanctum instalado | Controller criado | ⬜ |
-| 4.4 | Criar rotas de autenticação | 30 min | 🔴 Alta | AuthController criado | Rotas criadas | ⬜ |
-| 4.5 | Criar requests de validação | 1h | 🔴 Alta | AuthController criado | Form Requests criados | ⬜ |
-| 4.6 | Configurar rate limiting global | 30 min | 🔴 Alta | Projeto Laravel | Rate limiting configurado | ⬜ |
-| 4.7 | Configurar rate limiting por endpoint | 1h | 🔴 Alta | Rate limiting global | Limites por endpoint configurados | ⬜ |
+| 4.1 | Instalar Laravel Sanctum | 30 min | 🔴 Alta | Projeto Laravel | Sanctum instalado | ✅ |
+| 4.2 | Publicar configuração do Sanctum | 15 min | 🔴 Alta | Sanctum instalado | Config publicado | ✅ |
+| 4.3 | Criar AuthController | 3h | 🔴 Alta | Sanctum instalado | Controller criado | ✅ |
+| 4.4 | Criar rotas de autenticação | 30 min | 🔴 Alta | AuthController criado | Rotas criadas | ✅ |
+| 4.5 | Criar requests de validação | 1h | 🔴 Alta | AuthController criado | Form Requests criados | ✅ |
+| 4.6 | Configurar rate limiting global | 30 min | 🔴 Alta | Projeto Laravel | Rate limiting configurado | ✅ |
+| 4.7 | Configurar rate limiting por endpoint | 1h | 🔴 Alta | Rate limiting global | Limites por endpoint configurados | ✅ |
 | 4.8 | Criar middleware customizado (se necessário) | 1h | 🟡 Média | Rate limiting configurado | Middleware criado | ⬜ |
-| 4.9 | Criar regra de validação StrongPassword | 1h | 🔴 Alta | Projeto Laravel | Regra criada | ⬜ |
-| 4.10 | Aplicar regra no registro | 30 min | 🔴 Alta | Regra criada | Validação aplicada | ⬜ |
-| 4.11 | Criar endpoint de alteração de senha | 1h | 🟡 Média | Autenticação funcionando | Endpoint criado | ⬜ |
+| 4.9 | Criar regra de validação StrongPassword | 1h | 🔴 Alta | Projeto Laravel | Regra criada | ✅ |
+| 4.10 | Aplicar regra no registro | 30 min | 🔴 Alta | Regra criada | Validação aplicada | ✅ |
+| 4.11 | Criar endpoint de alteração de senha | 1h | 🟡 Média | Autenticação funcionando | Endpoint criado | ✅ |
 | 4.12 | Criar AccountController | 2h | 🔴 Alta | Entidade Account criada | Controller criado | ⬜ |
 | 4.13 | Implementar listagem de contas | 1h | 🔴 Alta | AccountController criado | Endpoint GET /accounts | ⬜ |
 | 4.14 | Implementar criação de conta | 2h | 🔴 Alta | AccountController criado | Endpoint POST /accounts | ⬜ |
