@@ -17,6 +17,11 @@ return Application::configure(basePath: dirname(__DIR__))
             \Illuminate\Http\Middleware\HandleCors::class,
             \Illuminate\Routing\Middleware\ThrottleRequests::class.':60,1',
         ]);
+
+        // Aplicar TenantMiddleware após autenticação
+        $middleware->alias([
+            'tenant' => \App\Http\Middleware\TenantMiddleware::class,
+        ]);
     })
     ->withExceptions(function (Exceptions $exceptions): void {
         //

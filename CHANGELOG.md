@@ -157,6 +157,14 @@ e este projeto adere ao [Semantic Versioning](https://semver.org/lang/pt-BR/).
     - GET /api/accounts/{id}/loans - Listar empréstimos
     - POST /api/accounts/{id}/repay - Registrar pagamento de empréstimo
   - Isolamento por organização implementado (filtro por organization_id)
+- Testes e Multi-tenancy implementados (Semana 4 - Tarefas 4.22-4.29)
+  - Testes unitários para entidades (User, Organization, Account)
+  - Testes de feature para endpoints de empréstimo
+  - Row-Level Security (RLS) habilitado no PostgreSQL
+  - Políticas RLS criadas para accounts, organizations e users
+  - TenantMiddleware implementado para isolamento automático
+  - Testes de isolamento de dados entre organizações
+  - Suporte a SQLite nos testes (RLS desabilitado automaticamente)
 
 ### Fixed
 

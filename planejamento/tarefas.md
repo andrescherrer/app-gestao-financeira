@@ -132,14 +132,14 @@ Este documento detalha todas as tarefas necessárias para implementar o sistema 
 | 4.19 | Implementar endpoint POST /accounts/{id}/lend | 2h | 🔴 Alta | AccountController criado | Endpoint de empréstimo criado | ✅ |
 | 4.20 | Implementar endpoint GET /accounts/{id}/loans | 1h | 🔴 Alta | AccountController criado | Endpoint de listagem criado | ✅ |
 | 4.21 | Implementar endpoint POST /accounts/{id}/repay | 2h | 🔴 Alta | AccountController criado | Endpoint de pagamento criado | ✅ |
-| 4.22 | Criar testes para entidade User | 2h | 🔴 Alta | Entidade User criada | Testes criados | ⬜ |
-| 4.23 | Criar testes para entidade Organization | 2h | 🔴 Alta | Entidade Organization criada | Testes criados | ⬜ |
-| 4.24 | Criar testes para entidade Account | 2h | 🔴 Alta | Entidade Account criada | Testes criados | ⬜ |
-| 4.25 | Criar testes para endpoints de empréstimo | 2h | 🔴 Alta | Endpoints criados | Testes criados | ⬜ |
-| 4.26 | Criar migration para habilitar RLS | 2h | 🔴 Alta | Migrations criadas | Migration de RLS criada | ⬜ |
-| 4.27 | Criar políticas RLS para accounts | 1h | 🔴 Alta | RLS habilitado | Políticas criadas | ⬜ |
-| 4.28 | Criar TenantMiddleware | 2h | 🔴 Alta | RLS configurado | Middleware criado | ⬜ |
-| 4.29 | Testar isolamento de dados | 1h | 🔴 Alta | Middleware criado | Testes de isolamento passando | ⬜ |
+| 4.22 | Criar testes para entidade User | 2h | 🔴 Alta | Entidade User criada | Testes criados | ✅ |
+| 4.23 | Criar testes para entidade Organization | 2h | 🔴 Alta | Entidade Organization criada | Testes criados | ✅ |
+| 4.24 | Criar testes para entidade Account | 2h | 🔴 Alta | Entidade Account criada | Testes criados | ✅ |
+| 4.25 | Criar testes para endpoints de empréstimo | 2h | 🔴 Alta | Endpoints criados | Testes criados | ✅ |
+| 4.26 | Criar migration para habilitar RLS | 2h | 🔴 Alta | Migrations criadas | Migration de RLS criada | ✅ |
+| 4.27 | Criar políticas RLS para accounts | 1h | 🔴 Alta | RLS habilitado | Políticas criadas | ✅ |
+| 4.28 | Criar TenantMiddleware | 2h | 🔴 Alta | RLS configurado | Middleware criado | ✅ |
+| 4.29 | Testar isolamento de dados | 1h | 🔴 Alta | Middleware criado | Testes de isolamento passando | ✅ |
 
 **Total Semana 4:** 29 tarefas | ~36h | 🔴 Alta: 26 | 🟡 Média: 3
 
