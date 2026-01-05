@@ -9,49 +9,6 @@ e este projeto adere ao [Semantic Versioning](https://semver.org/lang/pt-BR/).
 
 ### Added
 
-- Value Objects implementados (Semana 3 - Tarefas 3.1-3.5)
-  - Value Object `Money` para operações monetárias
-    - Suporte a centavos e decimais
-    - Operações: add, subtract, multiply
-    - Comparações e formatação
-    - Validação de moedas
-  - Value Object `Document` para CPF/CNPJ
-    - Validação completa de CPF e CNPJ
-    - Formatação automática
-    - Detecção automática do tipo
-  - Value Object `Email` para endereços de email
-    - Validação com filter_var
-    - Imutável e type-safe
-  - Value Object `Uuid` para identificadores únicos
-    - Integração com ramsey/uuid
-    - Geração e validação de UUIDs
-  - Testes unitários completos para todos os Value Objects
-    - 36 testes passando (66 assertions)
-    - Cobertura: Money 100%, Document 96.4%, Email 100%, Uuid 100%
-  - Dependência `ramsey/uuid` adicionada ao projeto
-- Entidades de domínio implementadas (Semana 3 - Tarefas 3.6-3.15)
-  - Entidade `User` para usuários do sistema
-    - Suporte a email, senha e organização
-    - Métodos para atualização de dados
-  - Entidade `Organization` para organizações (PF/PJ)
-    - Suporte a documento (CPF/CNPJ)
-    - Soft deletes implementado
-    - Planos de assinatura
-  - Entidade `Account` para contas financeiras
-    - Suporte a diferentes tipos de conta
-    - Campos específicos para empréstimos (borrower_id, interest_rate, loan_due_date)
-    - Soft deletes implementado
-  - Entidade `AccountType` para tipos de conta
-    - Suporte a credit_limit e borrower
-  - Migrations criadas e executadas
-    - `organizations` com UUID, documento, tipo e plano
-    - `users` atualizada para UUID e organization_id
-    - `account_types` com slug, has_credit_limit, supports_borrower
-    - `accounts` com todos os campos incluindo empréstimos
-  - Seeder `AccountTypeSeeder` criado e executado
-    - Tipos: checking, credit_card, investment, loan
-    - Dados populados no banco de dados
-
 - Configuração inicial do projeto
 - Projeto Laravel instalado via Composer (v12.44.0)
 - Estrutura base do backend criada em `backend/`
@@ -124,6 +81,48 @@ e este projeto adere ao [Semantic Versioning](https://semver.org/lang/pt-BR/).
   - Serviço de backup adicionado ao docker-compose.yml
   - Script de backup criado (`scripts/backup.sh`)
   - Retenção de backups configurada (30 dias por padrão)
+- Value Objects implementados (Semana 3 - Tarefas 3.1-3.5)
+  - Value Object `Money` para operações monetárias
+    - Suporte a centavos e decimais
+    - Operações: add, subtract, multiply
+    - Comparações e formatação
+    - Validação de moedas
+  - Value Object `Document` para CPF/CNPJ
+    - Validação completa de CPF e CNPJ
+    - Formatação automática
+    - Detecção automática do tipo
+  - Value Object `Email` para endereços de email
+    - Validação com filter_var
+    - Imutável e type-safe
+  - Value Object `Uuid` para identificadores únicos
+    - Integração com ramsey/uuid
+    - Geração e validação de UUIDs
+  - Testes unitários completos para todos os Value Objects
+    - 36 testes passando (66 assertions)
+    - Cobertura: Money 100%, Document 96.4%, Email 100%, Uuid 100%
+  - Dependência `ramsey/uuid` adicionada ao projeto
+- Entidades de domínio implementadas (Semana 3 - Tarefas 3.6-3.15)
+  - Entidade `User` para usuários do sistema
+    - Suporte a email, senha e organização
+    - Métodos para atualização de dados
+  - Entidade `Organization` para organizações (PF/PJ)
+    - Suporte a documento (CPF/CNPJ)
+    - Soft deletes implementado
+    - Planos de assinatura
+  - Entidade `Account` para contas financeiras
+    - Suporte a diferentes tipos de conta
+    - Campos específicos para empréstimos (borrower_id, interest_rate, loan_due_date)
+    - Soft deletes implementado
+  - Entidade `AccountType` para tipos de conta
+    - Suporte a credit_limit e borrower
+  - Migrations criadas e executadas
+    - `organizations` com UUID, documento, tipo e plano
+    - `users` atualizada para UUID e organization_id
+    - `account_types` com slug, has_credit_limit, supports_borrower
+    - `accounts` com todos os campos incluindo empréstimos
+  - Seeder `AccountTypeSeeder` criado e executado
+    - Tipos: checking, credit_card, investment, loan
+    - Dados populados no banco de dados
 
 ### Fixed
 
