@@ -82,6 +82,23 @@ Use apenas estas categorias, na ordem apresentada:
 - Adicione mudanças aqui durante o desenvolvimento
 - No release, renomeie para a versão e crie novo `[Unreleased]`
 
+### Ordem das Entradas
+
+**Para este projeto específico**, mantenha **ordem cronológica** na seção `[Unreleased]`:
+- Entradas mais antigas aparecem primeiro
+- Entradas mais recentes aparecem por último
+- Isso facilita a leitura do progresso do projeto por semanas/fases
+
+**Exemplo:**
+```markdown
+### Added
+- Semana 1: Configuração inicial
+- Semana 2: Ferramentas de qualidade
+- Semana 3: Value Objects e Entidades
+```
+
+**Nota:** Embora o padrão "Keep a Changelog" sugira ordem reversa (mais recente primeiro), para documentação de progresso contínuo, a ordem cronológica é mais clara e útil.
+
 ## Versionamento Semântico
 
 Ao criar uma release:
