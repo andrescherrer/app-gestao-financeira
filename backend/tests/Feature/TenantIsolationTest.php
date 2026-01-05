@@ -6,11 +6,16 @@ use App\Models\Account;
 use App\Models\AccountType;
 use App\Models\Organization;
 use App\Models\User;
+use Database\Seeders\AccountTypeSeeder;
 use Illuminate\Foundation\Testing\RefreshDatabase;
 use Illuminate\Support\Facades\Hash;
 use Ramsey\Uuid\Uuid;
 
 uses(RefreshDatabase::class);
+
+beforeEach(function () {
+    $this->seed(AccountTypeSeeder::class);
+});
 
 test('should isolate accounts by organization', function () {
     // Criar duas organizações
