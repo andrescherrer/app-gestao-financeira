@@ -139,6 +139,24 @@ e este projeto adere ao [Semantic Versioning](https://semver.org/lang/pt-BR/).
     - POST /api/login
     - POST /api/logout (autenticado)
     - POST /api/change-password (autenticado)
+- Endpoints de contas implementados (Semana 4 - Tarefas 4.12-4.21)
+  - AccountController criado com CRUD completo
+  - Models Eloquent criados (Account, Organization, AccountType)
+  - Form Requests para validação (StoreAccountRequest, UpdateAccountRequest)
+  - AccountResource para formatação de respostas
+  - Endpoints CRUD de contas
+    - GET /api/accounts - Listar contas
+    - POST /api/accounts - Criar conta
+    - GET /api/accounts/{id} - Detalhes da conta
+    - PUT /api/accounts/{id} - Atualizar conta
+    - DELETE /api/accounts/{id} - Excluir conta
+  - Endpoint de saldo
+    - GET /api/accounts/{id}/balance - Consultar saldo
+  - Endpoints de empréstimo
+    - POST /api/accounts/{id}/lend - Criar empréstimo para outro usuário
+    - GET /api/accounts/{id}/loans - Listar empréstimos
+    - POST /api/accounts/{id}/repay - Registrar pagamento de empréstimo
+  - Isolamento por organização implementado (filtro por organization_id)
 
 ### Fixed
 
