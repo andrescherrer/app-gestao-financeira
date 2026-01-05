@@ -32,6 +32,7 @@ final class AccountController extends Controller
      */
     public function store(StoreAccountRequest $request): JsonResponse
     {
+        /** @var \App\Models\User $user */
         $user = $request->user();
 
         $account = Account::create([
@@ -55,6 +56,7 @@ final class AccountController extends Controller
      */
     public function show(Request $request, string $id): JsonResponse
     {
+        /** @var \App\Models\User $user */
         $user = $request->user();
 
         $account = Account::query()
@@ -71,6 +73,7 @@ final class AccountController extends Controller
      */
     public function update(UpdateAccountRequest $request, string $id): JsonResponse
     {
+        /** @var \App\Models\User $user */
         $user = $request->user();
 
         $account = Account::query()
@@ -99,6 +102,7 @@ final class AccountController extends Controller
      */
     public function destroy(Request $request, string $id): JsonResponse
     {
+        /** @var \App\Models\User $user */
         $user = $request->user();
 
         $account = Account::query()
@@ -116,6 +120,7 @@ final class AccountController extends Controller
      */
     public function balance(Request $request, string $id): JsonResponse
     {
+        /** @var \App\Models\User $user */
         $user = $request->user();
 
         $account = Account::query()
@@ -140,6 +145,7 @@ final class AccountController extends Controller
      */
     public function lend(Request $request, string $id): JsonResponse
     {
+        /** @var \App\Models\User $user */
         $user = $request->user();
 
         $request->validate([
@@ -184,6 +190,7 @@ final class AccountController extends Controller
      */
     public function loans(Request $request, string $id): JsonResponse
     {
+        /** @var \App\Models\User $user */
         $user = $request->user();
 
         $account = Account::query()
@@ -205,6 +212,7 @@ final class AccountController extends Controller
      */
     public function repay(Request $request, string $id): JsonResponse
     {
+        /** @var \App\Models\User $user */
         $user = $request->user();
 
         $request->validate([
