@@ -92,16 +92,16 @@ Este documento detalha todas as tarefas necessárias para implementar o sistema 
 | 3.3 | Implementar Value Object Email | 1h | 🔴 Alta | Estrutura Domain criada | Classe `Email.php` completa | ✅ |
 | 3.4 | Implementar Value Object Uuid | 1h | 🔴 Alta | Estrutura Domain criada | Classe `Uuid.php` completa | ✅ |
 | 3.5 | Criar testes unitários para Value Objects | 4h | 🔴 Alta | Value Objects implementados | Testes criados e passando | ✅ |
-| 3.6 | Implementar entidade User | 2h | 🔴 Alta | Value Objects criados | Classe `User.php` completa | ⬜ |
-| 3.7 | Implementar entidade Organization | 3h | 🔴 Alta | Value Objects criados | Classe `Organization.php` completa | ⬜ |
-| 3.8 | Implementar entidade Account | 3h | 🔴 Alta | Value Objects criados | Classe `Account.php` completa | ⬜ |
-| 3.9 | Implementar entidade AccountType | 1h | 🔴 Alta | Estrutura Domain criada | Classe `AccountType.php` completa | ⬜ |
-| 3.10 | Criar migration de organizations | 1h | 🔴 Alta | Entidade Organization criada | Migration criada | ⬜ |
-| 3.11 | Criar migration de users | 1h | 🔴 Alta | Entidade User criada | Migration criada | ⬜ |
-| 3.12 | Criar migration de account_types | 1h | 🔴 Alta | Entidade AccountType criada | Migration criada | ⬜ |
-| 3.13 | Criar migration de accounts (com campos de empréstimo) | 1h | 🔴 Alta | Entidade Account criada | Migration criada | ⬜ |
-| 3.14 | Criar seeder de account_types (incluindo tipo loan) | 1h | 🟡 Média | Migration criada | Seeder criado | ⬜ |
-| 3.15 | Executar migrations e seeders | 30 min | 🔴 Alta | Todas as migrations criadas | Banco de dados populado | ⬜ |
+| 3.6 | Implementar entidade User | 2h | 🔴 Alta | Value Objects criados | Classe `User.php` completa | ✅ |
+| 3.7 | Implementar entidade Organization | 3h | 🔴 Alta | Value Objects criados | Classe `Organization.php` completa | ✅ |
+| 3.8 | Implementar entidade Account | 3h | 🔴 Alta | Value Objects criados | Classe `Account.php` completa | ✅ |
+| 3.9 | Implementar entidade AccountType | 1h | 🔴 Alta | Estrutura Domain criada | Classe `AccountType.php` completa | ✅ |
+| 3.10 | Criar migration de organizations | 1h | 🔴 Alta | Entidade Organization criada | Migration criada | ✅ |
+| 3.11 | Criar migration de users | 1h | 🔴 Alta | Entidade User criada | Migration criada | ✅ |
+| 3.12 | Criar migration de account_types | 1h | 🔴 Alta | Entidade AccountType criada | Migration criada | ✅ |
+| 3.13 | Criar migration de accounts (com campos de empréstimo) | 1h | 🔴 Alta | Entidade Account criada | Migration criada | ✅ |
+| 3.14 | Criar seeder de account_types (incluindo tipo loan) | 1h | 🟡 Média | Migration criada | Seeder criado | ✅ |
+| 3.15 | Executar migrations e seeders | 30 min | 🔴 Alta | Todas as migrations criadas | Banco de dados populado | ✅ |
 
 **Total Semana 3:** 15 tarefas | ~27h | 🔴 Alta: 14 | 🟡 Média: 1
 

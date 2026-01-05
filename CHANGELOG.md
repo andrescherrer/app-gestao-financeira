@@ -29,6 +29,28 @@ e este projeto adere ao [Semantic Versioning](https://semver.org/lang/pt-BR/).
     - 36 testes passando (66 assertions)
     - Cobertura: Money 100%, Document 96.4%, Email 100%, Uuid 100%
   - Dependência `ramsey/uuid` adicionada ao projeto
+- Entidades de domínio implementadas (Semana 3 - Tarefas 3.6-3.15)
+  - Entidade `User` para usuários do sistema
+    - Suporte a email, senha e organização
+    - Métodos para atualização de dados
+  - Entidade `Organization` para organizações (PF/PJ)
+    - Suporte a documento (CPF/CNPJ)
+    - Soft deletes implementado
+    - Planos de assinatura
+  - Entidade `Account` para contas financeiras
+    - Suporte a diferentes tipos de conta
+    - Campos específicos para empréstimos (borrower_id, interest_rate, loan_due_date)
+    - Soft deletes implementado
+  - Entidade `AccountType` para tipos de conta
+    - Suporte a credit_limit e borrower
+  - Migrations criadas e executadas
+    - `organizations` com UUID, documento, tipo e plano
+    - `users` atualizada para UUID e organization_id
+    - `account_types` com slug, has_credit_limit, supports_borrower
+    - `accounts` com todos os campos incluindo empréstimos
+  - Seeder `AccountTypeSeeder` criado e executado
+    - Tipos: checking, credit_card, investment, loan
+    - Dados populados no banco de dados
 
 - Configuração inicial do projeto
 - Projeto Laravel instalado via Composer (v12.44.0)
