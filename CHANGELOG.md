@@ -81,6 +81,22 @@ e este projeto adere ao [Semantic Versioning](https://semver.org/lang/pt-BR/).
   - Serviço de backup adicionado ao docker-compose.yml
   - Script de backup criado (`scripts/backup.sh`)
   - Retenção de backups configurada (30 dias por padrão)
+- Autenticação implementada (Semana 4 - Tarefas 4.1-4.11)
+  - Laravel Sanctum instalado e configurado
+  - AuthController com registro, login, logout e alteração de senha
+  - Form Requests para validação (RegisterRequest, LoginRequest, ChangePasswordRequest)
+  - Regra de validação StrongPassword implementada
+    - Mínimo 8 caracteres
+    - Pelo menos uma letra maiúscula, minúscula, número e caractere especial
+  - Rate limiting configurado
+    - Global: 60 requisições por minuto para API
+    - Autenticação: 5 requisições por minuto (register/login)
+    - Endpoints autenticados: 60 requisições por minuto
+  - Rotas de autenticação criadas
+    - POST /api/register
+    - POST /api/login
+    - POST /api/logout (autenticado)
+    - POST /api/change-password (autenticado)
 - Value Objects implementados (Semana 3 - Tarefas 3.1-3.5)
   - Value Object `Money` para operações monetárias
     - Suporte a centavos e decimais
