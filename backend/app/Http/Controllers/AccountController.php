@@ -87,7 +87,7 @@ final class AccountController extends Controller
             $data['initial_balance'] = (int) ($data['initial_balance'] * 100);
         }
 
-        if (isset($data['credit_limit']) && $data['credit_limit'] !== null) {
+        if (isset($data['credit_limit'])) {
             $data['credit_limit'] = (int) ($data['credit_limit'] * 100);
         }
 
@@ -162,7 +162,9 @@ final class AccountController extends Controller
             ->firstOrFail();
 
         // Verificar se o tipo de conta suporta empréstimos
-        if (! $account->accountType->supports_borrower) {
+        /** @var \App\Models\AccountType $accountType */
+        $accountType = $account->accountType;
+        if (! $accountType->supports_borrower) {
             return response()->json([
                 'message' => 'This account type does not support loans',
             ], 422);
